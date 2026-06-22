@@ -1,0 +1,375 @@
+/* =========================
+   Game Setup
+========================= */
+
+.game-setup {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.game-setup h1 {
+  text-align: center;
+  color: var(--primary);
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.game-setup-desc {
+  text-align: center;
+  color: var(--text-light);
+  margin-bottom: 24px;
+  line-height: 1.8;
+}
+
+.setup-card {
+  background: var(--white);
+  border: 1px solid var(--primary-light);
+  border-radius: 24px;
+  padding: 24px;
+  box-shadow: 0 8px 20px rgba(108, 76, 241, 0.08);
+}
+
+.setup-card h2 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+.players-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.player-row {
+  display: flex;
+  gap: 10px;
+}
+
+.player-row input {
+  flex: 1;
+}
+
+.player-row input,
+.rounds-box input {
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  font-family: "Cairo", sans-serif;
+  font-size: 1rem;
+  outline: none;
+}
+
+.player-row input:focus,
+.rounds-box input:focus {
+  border-color: var(--primary);
+}
+
+.icon-btn {
+  width: 48px;
+  border: none;
+  border-radius: 14px;
+  background: #fff5f5;
+  color: #dc2626;
+  cursor: pointer;
+}
+
+.icon-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.secondary-btn {
+  margin-top: 14px;
+  width: 100%;
+  border: none;
+  border-radius: 14px;
+  padding: 14px;
+  background: var(--white);
+  border: var(--primary) dashed;
+  color: var(--primary);
+  font-family: "Cairo", sans-serif;
+  font-weight: 800;
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.rounds-box {
+  margin-top: 20px;
+}
+
+.rounds-box label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.rounds-box input {
+  width: 100%;
+}
+
+.start-game-btn {
+  margin-top: 20px;
+  width: 100%;
+
+  border: none;
+  border-radius: 14px;
+
+  padding: 14px;
+
+  background: var(--primary);
+  color: white;
+
+  font-family: "Cairo", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+
+  cursor: pointer;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.start-game-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.setup-hint {
+  text-align: center;
+  margin-top: 12px;
+  color: red;
+  font-size: 0.9rem;
+}
+
+.saved-sessions {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.saved-sessions h3 {
+  color: var(--primary);
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+
+.session-card {
+  background: var(--background);
+  border: 1px solid var(--primary-light);
+  border-radius: 18px;
+  padding: 16px;
+  margin-top: 12px;
+}
+
+.session-card h4 {
+  color: var(--primary);
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+
+.session-players {
+  color: var(--text-light);
+  line-height: 1.8;
+  margin-bottom: 14px;
+}
+
+.session-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.use-session-btn,
+.delete-session-btn {
+  flex: 1;
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  font-family: "Cairo", sans-serif;
+  cursor: pointer;
+}
+
+.use-session-btn {
+  background: var(--primary);
+  color: white;
+  font-weight: 700;
+}
+
+.delete-session-btn {
+  background: #eb0e0e;
+  color: #f3efef;
+  font-weight: 700;
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 768px) {
+  .game-setup {
+    padding: 18px;
+  }
+
+  .setup-card {
+    padding: 18px;
+  }
+
+  .player-row {
+    flex-direction: row;
+  }
+}
+
+/*=================
+مين قالها
+==================*/
+.mode-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.mode-card {
+  background: var(--white);
+  border: 1px solid var(--primary-light);
+  border-radius: 20px;
+  padding: 20px;
+  cursor: pointer;
+  text-align: center;
+  font-family: "Cairo", sans-serif;
+}
+
+.mode-card:hover {
+  transform: translateY(-4px);
+  transition: 0.2s;
+}
+
+.mode-card h2 {
+  color: var(--primary);
+  margin-bottom: 12px;
+}
+
+.mode-card p {
+  color: var(--text-light);
+  line-height: 1.8;
+}
+
+.answer-input {
+  width: 100%;
+  min-height: 130px;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  font-family: "Cairo", sans-serif;
+  font-size: 1rem;
+  resize: vertical;
+  outline: none;
+}
+
+.answer-input:focus {
+  border-color: var(--primary);
+}
+
+.answer-card {
+  background: var(--background);
+  border: 1px solid var(--primary-light);
+  border-radius: 18px;
+  padding: 20px;
+  margin: 18px 0;
+  text-align: center;
+}
+
+.answer-card h3 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+
+.answer-card p {
+  color: var(--text);
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 2;
+}
+
+.guess-options {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.guess-btn {
+  border: 1px solid var(--primary-light);
+  background: var(--white);
+  color: var(--primary);
+  border-radius: 14px;
+  padding: 13px;
+  font-family: "Cairo", sans-serif;
+  font-size: 1rem;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.guess-btn:hover {
+  background: var(--primary-light);
+  transform: translateY(-2px);
+}
+
+.results-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.result-row {
+  background: var(--background);
+  border: 1px solid var(--primary-light);
+  border-radius: 16px;
+  padding: 14px 16px;
+  display: flex;
+  justify-content: space-between;
+  font-weight: 800;
+}
+
+
+
+.result-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.secondary-link-btn {
+  flex: 1;
+  text-align: center;
+  border-radius: 14px;
+  padding: 14px;
+  background: rgb(225, 184, 233);
+  color:rgb(99, 64, 106) ;
+  font-family: "Cairo", sans-serif;
+  font-weight: 800;
+}
+
+.result-actions .start-game-btn {
+  flex: 1;
+  margin-top: 0;
+  
+}
+
+
+
+@media (max-width: 768px) {
+  .result-actions {
+    flex-direction: column;
+  }
+}
