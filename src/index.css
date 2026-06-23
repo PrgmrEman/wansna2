@@ -136,8 +136,9 @@ a {
 
   /* تقليل الحواف */
   .navbar {
-    padding: 18px 10px 8px;
-    gap: 12px;
+    padding: 18px  8px;
+    gap: 5px;
+  
   }
 
   /* توزيع الروابط على عرض الشاشة */
@@ -148,12 +149,12 @@ a {
 
     /* 3 روابط كبيرة + مشاركة أصغر */
     grid-template-columns:
-      1fr
-      1fr
-      1fr
-      0.45fr;
+      1.2fr
+      1.2fr
+      1.2fr
+      0.4fr;
 
-    gap: 4px;
+    gap: 2px;
 
     align-items: center;
   }
@@ -162,9 +163,9 @@ a {
   .nav-links a {
     justify-content: center;
 
-    gap: 4px;
+    gap: 2px;
 
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     font-weight: 700;
 
     white-space: nowrap;
@@ -172,8 +173,8 @@ a {
 
   /* تصغير الأيقونات */
   .nav-links a svg {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 18px;
   }
 
   /* زر المشاركة */
@@ -220,7 +221,7 @@ a {
 
 /* الفوتر */
 .footer {
-  margin-top: 60px;
+  margin-top: 40px;
 
   /* فراغ داخلي */
   padding: 24px;
@@ -253,6 +254,7 @@ a {
 /* سطر الحقوق */
 .footer-copy {
   opacity: 0.8;
+  font-size: small;
 }
 
 /*==============================
@@ -268,18 +270,21 @@ a {
 
   /* تصغير الفوتر */
   .footer {
-    margin-top: 40px;
+    margin-top: 20px;
 
     padding: 18px 12px;
 
     font-size: 0.85rem;
+    
   }
 
   /* تصغير المسافة بين عناصر الفوتر */
   .footer-text {
     gap: 4px;
-
+    
+    
     margin-bottom: 6px;
+    
   }
 }
 
@@ -297,10 +302,11 @@ Game card styles
   display: block;
   height: 100%;
   background: var(--white);
-  padding: 28px 24px;
+  padding: 20px 18px;
   border-radius: 26px;
   border: 1px solid var(--primary-light);
   box-shadow: 0 14px 35px rgba(108, 76, 241, 0.10);
+
 }
 
 .game-icon {
@@ -327,6 +333,8 @@ Game card styles
   color: var(--text-light);
   line-height: 1.8;
   margin-bottom: 18px;
+  white-space: pre-line;
+  
 }
 
 .game-link {
@@ -349,7 +357,7 @@ Game card styles
 
   /* بطاقة اللعبة */
   .game-card {
-    padding: 22px 18px;
+    padding: 18px 16px;
     border-radius: 22px;
   }
 
@@ -386,7 +394,8 @@ Homepage styles
 ==========================*/
 .home-hero {
   text-align: center;
-  padding: 20px 20px 35px;
+  padding:  40px 24px;
+  
 }
 
 .hero-logo {
@@ -417,7 +426,7 @@ Homepage styles
   display: inline-block;
   background: var(--primary);
   color: white;
-  padding: 14px 34px;
+  padding: 12px 50px;
   border-radius: 999px;
   font-weight: 800;
   box-shadow: 0 8px 20px rgba(108, 76, 241, 0.2);
@@ -481,7 +490,8 @@ Homepage styles
 
   /* القسم الترحيبي */
   .home-hero {
-    padding: 10px 8px 25px;
+    padding: 16px 12px ;
+    
   }
 
   /* الشعار */
@@ -515,7 +525,7 @@ Homepage styles
 
   /* زر ابدأ اللعب */
   .primary-btn {
-    padding: 12px 26px;
+    padding: 10px 40px;
     font-size: 0.95rem;
   }
 
@@ -523,6 +533,7 @@ Homepage styles
   .features-section {
     gap: 12px;
     margin-bottom: 30px;
+    
   }
 
   /* البطاقة الواحدة */
@@ -542,6 +553,7 @@ Homepage styles
   /* قسم الألعاب المميزة */
   .featured-games {
     margin-top: 25px;
+    
   }
 
   /* عنوان القسم */

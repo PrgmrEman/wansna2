@@ -3,7 +3,8 @@ export const games = [
   {
     id: "who-said",
     title: "من قالها؟",
-    description: "خمّن ✅ تكسب نقطة ,خمّن ❌يكسب اللي قلها",
+    description: `تخّمن ✅ تكسب نقطة
+     تخّمن ❌ يكسب اللي قالها `,
     path: "/games/who-said",
     icon: MessageCircle,
   },
