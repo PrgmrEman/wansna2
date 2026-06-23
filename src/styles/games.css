@@ -37,6 +37,23 @@
   margin-bottom: 20px;
 }
 
+.setup-card h4{
+  text-align: center;
+  color: var(--text);
+  margin-bottom: 20px;
+  font-weight: 900;
+}
+
+.setup-card h3{
+  text-align: center;
+  color: var(--text);
+  margin-bottom: 20px;
+  font-weight: 900;
+}
+
+
+
+
 .players-list {
   display: flex;
   flex-direction: column;
@@ -148,6 +165,7 @@
   margin-top: 12px;
   color: red;
   font-size: 0.9rem;
+  font-weight: 900;
 }
 
 .saved-sessions {
@@ -212,23 +230,148 @@
 }
 
 /* =========================
-   Mobile
+   Game Setup Mobile
 ========================= */
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
+  /* حاوية إعداد اللعبة */
   .game-setup {
-    padding: 18px;
+    padding: 16px 10px;
   }
 
+  /* عنوان الصفحة */
+  .game-setup h1 {
+    font-size: 1.45rem;
+    margin-bottom: 12px;
+  }
+
+  /* وصف اللعبة */
+  .game-setup-desc {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-bottom: 18px;
+  }
+
+  /* البطاقة الرئيسية */
   .setup-card {
-    padding: 18px;
+    padding: 18px 14px;
+    border-radius: 20px;
   }
 
-  .player-row {
-    flex-direction: row;
+  /* عنوان البطاقة */
+  .setup-card h2 {
+    font-size: 1.15rem;
+    margin-bottom: 16px;
   }
+
+  .setup-card h3,
+.setup-card h4 {
+  text-align: center;
+  color: var(--text);
+  margin-bottom: 20px;
+  font-weight: 900;
 }
 
+  /* قائمة اللاعبين */
+  .players-list {
+    gap: 10px;
+  }
+
+  /* صف اللاعب */
+  .player-row {
+    gap: 8px;
+  }
+
+  /* حقول الإدخال */
+  .player-row input,
+  .rounds-box input {
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 0.92rem;
+  }
+
+  /* زر حذف اللاعب */
+  .icon-btn {
+    width: 42px;
+    border-radius: 12px;
+  }
+
+  /* زر إضافة لاعب */
+  .secondary-btn {
+    margin-top: 12px;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 0.92rem;
+  }
+
+  /* صندوق عدد الجولات */
+  .rounds-box {
+    margin-top: 16px;
+  }
+
+  /* عنوان عدد الجولات */
+  .rounds-box label {
+    font-size: 0.92rem;
+    margin-bottom: 6px;
+  }
+
+  /* زر بدء اللعبة */
+  .start-game-btn {
+    margin-top: 16px;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+  }
+
+  /* رسائل التنبيه */
+  .setup-hint {
+    margin-top: 10px;
+    font-size: 0.82rem;
+  }
+
+  /* الجلسات المحفوظة */
+  .saved-sessions {
+    margin-top: 16px;
+    gap: 8px;
+  }
+
+  /* عنوان الجلسات */
+  .saved-sessions h3 {
+    font-size: 0.95rem;
+  }
+
+  /* بطاقة الجلسة */
+  .session-card {
+    padding: 14px;
+    border-radius: 16px;
+    margin-top: 10px;
+  }
+
+  /* اسم الجلسة */
+  .session-card h4 {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+  }
+
+  /* أسماء لاعبي الجلسة */
+  .session-players {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+
+  /* أزرار استخدام / حذف */
+  .session-actions {
+    gap: 8px;
+  }
+
+  .use-session-btn,
+  .delete-session-btn {
+    padding: 9px;
+    border-radius: 10px;
+    font-size: 0.88rem;
+  }
+}
 /*=================
 مين قالها
 ==================*/
@@ -366,10 +509,96 @@
   
 }
 
+/*=================
+مين قالها - الجوال
+==================*/
 
+@media (max-width: 600px) {
+  /* كروت اختيار النمط */
+  .mode-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
 
-@media (max-width: 768px) {
+  .mode-card {
+    padding: 16px;
+    border-radius: 18px;
+  }
+
+  .mode-card h2 {
+    font-size: 1.15rem;
+    margin-bottom: 8px;
+  }
+
+  .mode-card p {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  /* مربع إدخال المحتوى */
+  .answer-input {
+    min-height: 110px;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 0.92rem;
+  }
+
+  /* بطاقة عرض المحتوى */
+  .answer-card {
+    padding: 16px;
+    margin: 14px 0;
+    border-radius: 16px;
+  }
+
+  .answer-card h3 {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .answer-card p {
+    font-size: 1rem;
+    line-height: 1.8;
+  }
+
+  /* أزرار التخمين */
+  .guess-options {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-top: 12px;
+  }
+
+  .guess-btn {
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 0.92rem;
+  }
+
+  /* قائمة النتائج */
+  .results-list {
+    gap: 10px;
+  }
+
+  .result-row {
+    padding: 12px 14px;
+    border-radius: 14px;
+    font-size: 0.92rem;
+  }
+
+  /* أزرار النتائج */
   .result-actions {
     flex-direction: column;
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .secondary-link-btn {
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 0.92rem;
+  }
+
+  .result-actions .start-game-btn {
+    width: 100%;
   }
 }
+

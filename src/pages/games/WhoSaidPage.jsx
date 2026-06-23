@@ -321,7 +321,7 @@ function getRankIcon(index, player) {
           <h2>مرر الجهاز للاعب التالي</h2>
 
           <p className="setup-hint">
-            اللاعب التالي للتخمين: {currentAssignment?.player}
+          دور: {currentAssignment?.player}
           </p>
 
           <button
@@ -336,7 +336,7 @@ function getRankIcon(index, player) {
         <>
           <h2>الجولة {currentRound + 1}</h2>
 
-          <p>دور: {currentAssignment?.player}</p>
+          <h4>دور: {currentAssignment?.player}</h4>
 
           <div className="answer-card">
             <h3>المحتوى</h3>

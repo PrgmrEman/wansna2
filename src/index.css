@@ -39,88 +39,253 @@ a {
   --white: #FFFFFF;
 }
 
-/* Navbar styles */
+/*============================
+ Navbar styles
+  ==========================*/
+/* ========================================
+   Navbar Container
+======================================== */
+
+/* الحاوية الرئيسية للنافبار */
 .navbar {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 18px;
+  gap: 20px;
 
-  max-width: 1200px;
+  max-width: 120000px;
   margin: 0 auto;
-  padding: 22px 24px 10px;
+
+  padding: 22px 24px 10px 22px;
 }
 
+/* ========================================
+   Logo
+======================================== */
+
+/* شعار ونسنّا */
 .logo {
   font-size: 2.2rem;
   font-weight: 800;
   color: var(--primary);
 }
 
+/* ========================================
+   Navigation Links
+======================================== */
+
+/* حاوية الروابط */
 .nav-links {
   display: flex;
   justify-content: center;
+  align-items: center;
+
   gap: 28px;
+
   flex-wrap: wrap;
 }
 
+/* الرابط الواحد */
 .nav-links a {
   display: flex;
   align-items: center;
+
   gap: 8px;
 
   font-size: 1.3rem;
   font-weight: 700;
+
   color: #555;
 
   transition: 0.2s ease;
 }
 
+/* عند المرور على الرابط */
 .nav-links a:hover {
   color: var(--primary);
 }
 
+.share-btn {
+  margin-right: 20px;
+}
+/* Responsive adjustments for developer card */
+.share-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: rgb(9, 180, 134);
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
 
-/* Main content styles */
+.share-btn:hover {
+  transform: scale(1.1);
+}
+
+/* ========================================
+   Mobile Navbar
+======================================== */
+
+@media (max-width: 600px) {
+
+  /* تصغير الشعار قليلاً */
+  .logo {
+    font-size: 1.8rem;
+  }
+
+  /* تقليل الحواف */
+  .navbar {
+    padding: 18px 10px 8px;
+    gap: 12px;
+  }
+
+  /* توزيع الروابط على عرض الشاشة */
+  .nav-links {
+    width: 100%;
+
+    display: grid;
+
+    /* 3 روابط كبيرة + مشاركة أصغر */
+    grid-template-columns:
+      1fr
+      1fr
+      1fr
+      0.45fr;
+
+    gap: 4px;
+
+    align-items: center;
+  }
+
+  /* الروابط */
+  .nav-links a {
+    justify-content: center;
+
+    gap: 4px;
+
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    white-space: nowrap;
+  }
+
+  /* تصغير الأيقونات */
+  .nav-links a svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  /* زر المشاركة */
+
+  .share-btn {
+    transform: scale(0.85);
+    margin-right: 0;
+  }
+
+  .share-btn svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+/*==============================
+ Main Content
+==============================*/
+
+/* المحتوى الرئيسي للصفحة */
 .main-content {
   width: 100%;
+
+  /* أقل ارتفاع للصفحة */
   min-height: 60vh;
+
+  /* فراغ داخلي حول المحتوى */
   padding: 40px 24px;
 }
 
+/* حاوية الصفحات */
 .page-container {
   max-width: 1100px;
+
+  /* توسيط المحتوى */
   margin: 0 auto;
+
   width: 100%;
 }
 
-/* Footer styles */
+/*==============================
+ Footer
+==============================*/
+
+/* الفوتر */
 .footer {
   margin-top: 60px;
+
+  /* فراغ داخلي */
   padding: 24px;
+
   text-align: center;
+
   border-top: 1px solid var(--primary-light);
+
   color: var(--text-light);
+
   font-size: 0.95rem;
 }
 
+/* السطر الأول في الفوتر */
 .footer-text {
   display: flex;
   justify-content: center;
   align-items: center;
+
   gap: 6px;
+
   margin-bottom: 8px;
 }
 
+/* لون القلب */
 .footer-heart {
   color: var(--primary);
 }
 
+/* سطر الحقوق */
 .footer-copy {
   opacity: 0.8;
 }
 
-/* Game card styles */
+/*==============================
+ Mobile footer
+==============================*/
+
+@media (max-width: 600px) {
+
+  /* تقليل الحواف في الجوال */
+  .main-content {
+    padding: 24px 12px;
+  }
+
+  /* تصغير الفوتر */
+  .footer {
+    margin-top: 40px;
+
+    padding: 18px 12px;
+
+    font-size: 0.85rem;
+  }
+
+  /* تصغير المسافة بين عناصر الفوتر */
+  .footer-text {
+    gap: 4px;
+
+    margin-bottom: 6px;
+  }
+}
+
+/* ===================
+Game card styles 
+==========================*/
 .games-grid {
   padding: 20px 0;
   display: grid;
@@ -169,9 +334,56 @@ a {
   color: var(--primary);
   font-weight: 800;
 }
+/*==============================
+ Game Cards Mobile
+==============================*/
 
+@media (max-width: 600px) {
+  /* شبكة الألعاب */
+  .games-grid {
+    padding: 12px 0;
+    gap: 14px;
 
-/*Homepage styles */
+    grid-template-columns: 1fr;
+  }
+
+  /* بطاقة اللعبة */
+  .game-card {
+    padding: 22px 18px;
+    border-radius: 22px;
+  }
+
+  /* أيقونة اللعبة */
+  .game-icon {
+    width: 54px;
+    height: 54px;
+    margin-bottom: 14px;
+
+    border-radius: 18px;
+  }
+
+  /* عنوان اللعبة */
+  .game-card h3 {
+    font-size: 1.18rem;
+    margin-bottom: 8px;
+  }
+
+  /* وصف اللعبة */
+  .game-card p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 14px;
+  }
+
+  /* رابط الدخول */
+  .game-link {
+    font-size: 0.95rem;
+  }
+}
+
+/*===========================
+Homepage styles 
+==========================*/
 .home-hero {
   text-align: center;
   padding: 20px 20px 35px;
@@ -182,7 +394,7 @@ a {
 }
 
 .hero-subtitle {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 800;
   color: var(--text);
   margin-bottom: 8px;
@@ -259,6 +471,91 @@ a {
 .section-header a {
   color: var(--primary);
   font-weight: 800;
+}
+
+/*==============================
+ Homepage Mobile
+==============================*/
+
+@media (max-width: 600px) {
+
+  /* القسم الترحيبي */
+  .home-hero {
+    padding: 10px 8px 25px;
+  }
+
+  /* الشعار */
+  .hero-logo {
+    margin-bottom: 8px;
+  }
+   /*تعديل عرض الصورة*/
+  .home-hero img{
+    width: 180px;
+  
+  }
+
+  /* عنوان الصفحة */
+  .hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 6px;
+  }
+
+  /* العبارة الرئيسية */
+  .hero-text {
+    font-size: 1rem;
+    margin-bottom: 6px;
+  }
+
+  /* الوصف */
+  .hero-description {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    line-height: 1.8;
+  }
+
+  /* زر ابدأ اللعب */
+  .primary-btn {
+    padding: 12px 26px;
+    font-size: 0.95rem;
+  }
+
+  /* بطاقات المميزات */
+  .features-section {
+    gap: 12px;
+    margin-bottom: 30px;
+  }
+
+  /* البطاقة الواحدة */
+  .feature-card {
+    padding: 14px;
+    gap: 10px;
+    border-radius: 16px;
+    font-size: 0.95rem;
+  }
+
+  /* أيقونة البطاقة */
+  .feature-card svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  /* قسم الألعاب المميزة */
+  .featured-games {
+    margin-top: 25px;
+  }
+
+  /* عنوان القسم */
+  .section-header {
+    margin-bottom: 14px;
+  }
+
+  .section-header h2 {
+    font-size: 1.2rem;
+  }
+
+  .section-header a {
+    font-size: 0.9rem;
+  }
 }
 
 /* About page styles */
@@ -453,17 +750,3 @@ a {
   font-weight: 500;
 }
 
-/* Responsive adjustments for developer card */
-.share-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: var(--primary);
-  display: flex;
-  align-items: center;
-  padding: 0;
-}
-
-.share-btn:hover {
-  transform: scale(1.1);
-}
