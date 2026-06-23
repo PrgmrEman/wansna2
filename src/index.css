@@ -53,10 +53,11 @@ a {
   align-items: center;
   gap: 20px;
 
-  max-width: 120000px;
+  max-width: 12000px;
   margin: 0 auto;
 
-  padding: 22px 24px 10px 22px;
+  padding: 30px 10px 10px 10px;
+
 }
 
 /* ========================================
@@ -202,12 +203,15 @@ a {
   min-height: 60vh;
 
   /* فراغ داخلي حول المحتوى */
-  padding: 40px 24px;
+  padding: 18px 16px;
+  
+  
 }
 
 /* حاوية الصفحات */
 .page-container {
   max-width: 1100px;
+  
 
   /* توسيط المحتوى */
   margin: 0 auto;
@@ -265,7 +269,7 @@ a {
 
   /* تقليل الحواف في الجوال */
   .main-content {
-    padding: 24px 12px;
+    padding:20px 12px;
   }
 
   /* تصغير الفوتر */
@@ -394,12 +398,12 @@ Homepage styles
 ==========================*/
 .home-hero {
   text-align: center;
-  padding:  40px 24px;
-  
+  padding:  20px 20px 50px 20px ;
 }
 
 .hero-logo {
   margin-bottom: 10px;
+
 }
 
 .hero-subtitle {
@@ -407,6 +411,7 @@ Homepage styles
   font-weight: 800;
   color: var(--text);
   margin-bottom: 8px;
+
 }
 
 .hero-text {
@@ -490,8 +495,8 @@ Homepage styles
 
   /* القسم الترحيبي */
   .home-hero {
-    padding: 16px 12px ;
-    
+    padding: 20px 8px 20px 8px ; 
+  
   }
 
   /* الشعار */
