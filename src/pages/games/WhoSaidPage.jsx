@@ -163,7 +163,7 @@ function getRankIcon(index, player) {
   return (
     <>
       <SEO
-        title="مين قالها"
+        title="من قالها"
         description="لعبة جماعية ممتعة تخمنون فيها من صاحب الكلمة أو الحقيقة أو الموقف."
       />
 
@@ -171,7 +171,7 @@ function getRankIcon(index, player) {
       {stage === "setup" ? (
         //اذا مرحلة الاعدادات استدعي المكون اعدادت اللعبة الجماعية و مرر له المعطيات
         <GroupGameSetup
-          title="مين قالها"
+          title="من قالها"
           description="أدخل أسماء اللاعبين:"
           minPlayers={3}
           maxPlayers={12}
@@ -344,7 +344,7 @@ function getRankIcon(index, player) {
             <p>{currentAnswerToGuess?.answer}</p>
           </div>
 
-          <h3>مين قالها؟</h3>
+          <h3>من قالها؟</h3>
 
           <div className="guess-options">
             {settings.players
